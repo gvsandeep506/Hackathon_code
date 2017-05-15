@@ -1,0 +1,429 @@
+{% extends "app1/base.html" %}
+{% load staticfiles %}
+
+
+{% block stylesheets%}
+	<link rel="stylesheet" type="text/css" href="{% static 'app1/css/viewAllCert.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="main">
+
+	<h2>Primary Owned</h2>
+	{%for cert in all_cert_primary_TYPE1 %}
+		<div>
+			<form action="modify" method="POST">
+			{% csrf_token %}
+
+				<div >
+					<label class="control-label col-md-2">Certificate Name </label>
+					<input type="text" value="{{cert.certName}}" name="certName" readonly="readonly" >
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Certificate Type </label>
+					<input type="text" value="{{cert.certType}}" name="certType" readonly="readonly">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Password </label>
+					<input type="text" value="{{cert.certPasswd}}" name="certPasswd">
+				</div>
+				
+				<div>
+					<label class="control-label col-md-2">Expiry Date </label>
+					<input type="" value="{{cert.expiryDate}}" name="expiryDate">
+				</div>
+				
+				<div>
+					<label class="control-label col-md-2">Department</label>
+					<input type="" value="{{cert.department}}" name="department" readonly="readonly">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Primart Owner</label>
+					<input type="" value="{{cert.primaryOwner}}" name="primaryOwner" readonly="readonly">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Secondary Owner</label>
+					<input type="" value="{{cert.secondaryOwners}}" name="secondaryOwners">
+				</div>
+				
+				<div > 
+					<label class="control-label col-md-2">Escalation E-mail</label>
+					<input type="" value="{{cert.escalationMail}}" name="escalationMail">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Reminder Days</label>
+					<input type="" value="{{cert.reminderDays}}" name="reminderDays">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2" >Comment</label>
+					<textarea rows="4" cols="50" name="comment">{{cert.comment}}</textarea>
+				</div>
+				
+				<div>
+					<button type="submit" value="update" name="update">Update</button>
+					<button type="submit" value="delete" name="delete">Delete</button>
+				</div>
+
+			</form>
+		</div>
+		<hr class="style1">
+	{% endfor %}
+
+
+
+
+
+	{%for cert in all_cert_primary_TYPE2 %}
+		<div>
+			<form action="modify" method="POST">
+			{% csrf_token %}
+
+				<div >
+					<label class="control-label col-md-2">Certificate Name </label>
+					<input type="text" value="{{cert.certName}}" name="certName" readonly="readonly" >
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Certificate Type </label>
+					<input type="text" value="{{cert.certType}}" name="certType" readonly="readonly">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Password </label>
+					<input type="text" value="{{cert.certPasswd}}" name="certPasswd">
+				</div>
+				
+				<div>
+					<label class="control-label col-md-2">Expiry Date </label>
+					<input type="" value="{{cert.expiryDate}}" name="expiryDate">
+				</div>
+				
+				<div>
+					<label class="control-label col-md-2">Department</label>
+					<input type="" value="{{cert.department}}" name="department" readonly="readonly">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Primart Owner</label>
+					<input type="" value="{{cert.primaryOwner}}" name="primaryOwner" readonly="readonly">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Secondary Owner</label>
+					<input type="" value="{{cert.secondaryOwners}}" name="secondaryOwners">
+				</div>
+				
+				<div > 
+					<label class="control-label col-md-2">Escalation E-mail</label>
+					<input type="" value="{{cert.escalationMail}}" name="escalationMail">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Reminder Days</label>
+					<input type="" value="{{cert.reminderDays}}" name="reminderDays">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2" >Comment</label>
+					<textarea rows="4" cols="50" name="comment">{{cert.comment}}</textarea>
+				</div>
+				
+				<div>
+					<button type="submit" value="update" name="update">Update</button>
+					<button type="submit" value="delete" name="delete">Delete</button>
+				</div>
+
+			</form>
+		</div>
+		<hr class="style1">
+	{% endfor %}
+
+
+
+
+	{%for cert in all_cert_primary_TYPE3 %}
+		<div>
+			<form action="modify" method="POST">
+			{% csrf_token %}
+
+				<div >
+					<label class="control-label col-md-2">Certificate Name </label>
+					<input type="text" value="{{cert.certName}}" name="certName" readonly="readonly" >
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Certificate Type </label>
+					<input type="text" value="{{cert.certType}}" name="certType" readonly="readonly">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Password </label>
+					<input type="text" value="{{cert.certPasswd}}" name="certPasswd">
+				</div>
+				
+				<div>
+					<label class="control-label col-md-2">Expiry Date </label>
+					<input type="" value="{{cert.expiryDate}}" name="expiryDate">
+				</div>
+				
+				<div>
+					<label class="control-label col-md-2">Department</label>
+					<input type="" value="{{cert.department}}" name="department" readonly="readonly">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Primart Owner</label>
+					<input type="" value="{{cert.primaryOwner}}" name="primaryOwner" readonly="readonly">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Secondary Owner</label>
+					<input type="" value="{{cert.secondaryOwners}}" name="secondaryOwners">
+				</div>
+				
+				<div > 
+					<label class="control-label col-md-2">Escalation E-mail</label>
+					<input type="" value="{{cert.escalationMail}}" name="escalationMail">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Reminder Days</label>
+					<input type="" value="{{cert.reminderDays}}" name="reminderDays">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2" >Comment</label>
+					<textarea rows="4" cols="50" name="comment">{{cert.comment}}</textarea>
+				</div>
+				
+				<div>
+					<button type="submit" value="update" name="update">Update</button>
+					<button type="submit" value="delete" name="delete">Delete</button>
+				</div>
+
+			</form>
+		</div>
+		<hr class="style1">
+	{% endfor %}
+
+
+
+
+
+
+
+
+	<br>
+	<br>
+
+	<h2>Secondary Owned</h2>
+	
+	{%for cert in all_cert_secondary_TYPE1 %}
+		<div>
+			<form action="modify" method="POST">
+			{% csrf_token %}
+
+				<div >
+					<label class="control-label col-md-2">Certificate Name </label>
+					<input type="text" value="{{cert.certName}}" name="certName" readonly="readonly" >
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Certificate Type </label>
+					<input type="text" value="{{cert.certType}}" name="certType" readonly="readonly">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Password </label>
+					<input type="text" value="{{cert.certPasswd}}" name="certPasswd">
+				</div>
+				
+				<div>
+					<label class="control-label col-md-2">Expiry Date </label>
+					<input type="" value="{{cert.expiryDate}}" name="expiryDate">
+				</div>
+				
+				<div>
+					<label class="control-label col-md-2">Department</label>
+					<input type="" value="{{cert.department}}" name="department" readonly="readonly">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Primart Owner</label>
+					<input type="" value="{{cert.primaryOwner}}" name="primaryOwner" readonly="readonly">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Secondary Owner</label>
+					<input type="" value="{{cert.secondaryOwners}}" name="secondaryOwners">
+				</div>
+				
+				<div > 
+					<label class="control-label col-md-2">Escalation E-mail</label>
+					<input type="" value="{{cert.escalationMail}}" name="escalationMail">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Reminder Days</label>
+					<input type="" value="{{cert.reminderDays}}" name="reminderDays">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2" >Comment</label>
+					<textarea rows="4" cols="50" name="comment">{{cert.comment}}</textarea>
+				</div>
+				
+				<div>
+					<button type="submit" value="update" name="update">Update</button>
+					<button type="submit" value="delete" name="delete">Delete</button>
+				</div>
+
+			</form>
+		</div>
+		<hr class="style1"> 
+	{% endfor %}
+
+
+	{%for cert in all_cert_secondary_TYPE2 %}
+		<div>
+			<form action="modify" method="POST">
+			{% csrf_token %}
+
+				<div >
+					<label class="control-label col-md-2">Certificate Name </label>
+					<input type="text" value="{{cert.certName}}" name="certName" readonly="readonly" >
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Certificate Type </label>
+					<input type="text" value="{{cert.certType}}" name="certType" readonly="readonly">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Password </label>
+					<input type="text" value="{{cert.certPasswd}}" name="certPasswd">
+				</div>
+				
+				<div>
+					<label class="control-label col-md-2">Expiry Date </label>
+					<input type="" value="{{cert.expiryDate}}" name="expiryDate">
+				</div>
+				
+				<div>
+					<label class="control-label col-md-2">Department</label>
+					<input type="" value="{{cert.department}}" name="department" readonly="readonly">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Primart Owner</label>
+					<input type="" value="{{cert.primaryOwner}}" name="primaryOwner" readonly="readonly">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Secondary Owner</label>
+					<input type="" value="{{cert.secondaryOwners}}" name="secondaryOwners">
+				</div>
+				
+				<div > 
+					<label class="control-label col-md-2">Escalation E-mail</label>
+					<input type="" value="{{cert.escalationMail}}" name="escalationMail">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Reminder Days</label>
+					<input type="" value="{{cert.reminderDays}}" name="reminderDays">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2" >Comment</label>
+					<textarea rows="4" cols="50" name="comment">{{cert.comment}}</textarea>
+				</div>
+				
+				<div>
+					<button type="submit" value="update" name="update">Update</button>
+					<button type="submit" value="delete" name="delete">Delete</button>
+				</div>
+
+			</form>
+		</div>
+		<hr class="style1">
+	{% endfor %}
+
+
+
+
+	{%for cert in all_cert_secondary_TYPE3 %}
+		<div>
+			<form action="modify" method="POST">
+			{% csrf_token %}
+
+				<div >
+					<label class="control-label col-md-2">Certificate Name </label>
+					<input type="text" value="{{cert.certName}}" name="certName" readonly="readonly" >
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Certificate Type </label>
+					<input type="text" value="{{cert.certType}}" name="certType" readonly="readonly">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Password </label>
+					<input type="text" value="{{cert.certPasswd}}" name="certPasswd">
+				</div>
+				
+				<div>
+					<label class="control-label col-md-2">Expiry Date </label>
+					<input type="" value="{{cert.expiryDate}}" name="expiryDate">
+				</div>
+				
+				<div>
+					<label class="control-label col-md-2">Department</label>
+					<input type="" value="{{cert.department}}" name="department" readonly="readonly">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Primart Owner</label>
+					<input type="" value="{{cert.primaryOwner}}" name="primaryOwner" readonly="readonly">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Secondary Owner</label>
+					<input type="" value="{{cert.secondaryOwners}}" name="secondaryOwners">
+				</div>
+				
+				<div > 
+					<label class="control-label col-md-2">Escalation E-mail</label>
+					<input type="" value="{{cert.escalationMail}}" name="escalationMail">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2">Reminder Days</label>
+					<input type="" value="{{cert.reminderDays}}" name="reminderDays">
+				</div>
+				
+				<div >
+					<label class="control-label col-md-2" >Comment</label>
+					<textarea rows="4" cols="50" name="comment">{{cert.comment}}</textarea>
+				</div>
+				
+				<div>
+					<button type="submit" value="update" name="update">Update</button>
+					<button type="submit" value="delete" name="delete">Delete</button>
+				</div>
+
+			</form>
+		</div>
+		<hr class="style1">
+	{% endfor %}
+
+</div>
+
+{% endblock %}

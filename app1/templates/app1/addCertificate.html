@@ -1,0 +1,94 @@
+{% extends "app1/base.html" %}
+
+
+
+{% block content %}
+
+<form method="POST" action="addCertificate">
+    {% csrf_token %}
+
+    <div class="form-group">
+
+        <label class="control-label col-md-3" for="id_primaryOwner">PrimaryOwner:</label>
+        <div class="input-group col-md-7">
+            <input class="form-control" type="text" name="primaryOwner" required id="id_primaryOwner" maxlength="128" value="{{primaryOwner}}" readonly="readonly">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-3" for="id_department">Department:</label>
+        <div class="input-group col-md-7">
+            <input class="form-control" type="text" name="department" required id="id_department" maxlength="128" value="{{department}}" readonly="readonly"/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-3" for="id_certName">CertName:</label>
+        <div class="input-group col-md-7">
+            <input class="form-control" type="text" name="certName" required id="id_certName" maxlength="128" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-3" for="id_certType">CertType:</label>
+        <div class="input-group col-md-7">
+            <select name="certType" required id="id_certType">
+                <option value="AMG">AMG Request</option>
+                <option value="Password">Password</option>
+                <option value="Certificate">Certificate</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-3" for="id_certPasswd">Certpasswd:</label>
+        <div class="input-group col-md-7">
+            <input class="form-control" type="password" name="certPasswd" id="id_certPasswd" />
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="control-label col-md-3" for="id_expiryDate">Expirydate:</label>
+        <div class="input-group col-md-7">
+            <input class="form-control" type="text" name="expiryDate" id="id_expiryDate" placeholder="YYYY-MM-DD" required class="vDateField" size="10" />
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="control-label col-md-3" for="id_secondaryOwners">SecondaryOwner:</label>
+        <div class="input-group col-md-7">
+            <input class="form-control" type="text" name="secondaryOwners" id="id_secondaryOwners" maxlength="128" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-3" for="id_reminder">Reminder:</label>
+        <div class="input-group col-md-7">
+            <input class="form-control" type="number" name="reminderDays" placeholder="You will start getting mails from these days before the expiry date" required id="id_reminder" min="0" />
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="control-label col-md-3" for="id_escalationMail">EscalationMail:</label>
+        <div class="input-group col-md-7">
+            <input class="form-control" type="email" name="escalationMail" required id="id_escalationMail" maxlength="254" />
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="control-label col-md-3" for="id_comments">Comments:</label>
+        <div class="input-group col-md-7">
+            <textarea class="form-control" name="comment" rows="6" cols="20" id="id_comments"></textarea>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+</form>
+
+{% endblock %}

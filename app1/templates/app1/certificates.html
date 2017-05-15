@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PMS | Certificates</title>
+	<meta charset="utf-8">
+
+</head>
+<body>
+
+	<div class="content">
+
+		<a href="addCertificate">Add Certificate </a>
+		</br>
+
+
+		{% for cert in allCert %}
+			{{cert.certName}}
+			<br>
+		{% endfor%}
+
+
+		</br>
+		{{deptName}}
+
+
+
+
+	</div>
+
+</body>
+</html>

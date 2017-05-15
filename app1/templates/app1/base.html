@@ -1,0 +1,104 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Password Management System</title>
+
+    <link href="{% static "app1/css/bootstrap.min.css" %}" rel="stylesheet">
+
+    <link href="{% static "app1/css/ie10-viewport-bug-workaround.css" %}" rel="stylesheet">
+
+    <link href="{% static "app1/css/navbar-static-top.css" %}" rel="stylesheet">
+
+    <script src="{% static "app1/js/ie-emulation-modes-warning.js" %}"></script>
+
+
+    <style>
+      .outer_main{
+        background-color: lue;
+        box-shadow: 5px 5px 5px #888888;
+        border-radius: 2px;
+      }
+    </style>
+    
+
+
+
+    {% block scripts%}
+    {% endblock %}
+
+
+    {% block stylesheets%}
+    {% endblock %}
+
+
+
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">{% block header %}Password Management System{% endblock %}</a>
+
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+
+            {% block add_view %}
+          <ul class="nav navbar-nav">
+
+
+                <li><a href="{% url "addCertificate" %}">Add data</a></li>
+                <li><a href="{% url "viewAllCertificates" %}">View data</a></li>
+
+          </ul>
+
+            {% endblock %}
+          <ul class="nav navbar-nav navbar-right">
+
+            <li><a href="{% url "signout" %}">Signout</a></li>
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+    <div class="container ">
+
+
+      <div class="jumbotron outer_main">
+
+        {% block content %}
+        {% endblock %}
+
+
+      </div>
+
+    </div>
+
+
+    <script src="{% static "app1/js/jquery.min.js" %}"></script>
+    <script>window.jQuery || document.write('<script src="{% static "app1/js/vendor/jquery.min.js" %}"><\/script>')</script>
+    <script src="{% static "app1/js/bootstrap.min.js" %}"></script>
+
+    <script src="{% static "app1/js/ie10-viewport-bug-workaround.js" %}"></script>
+  </body>
+</html>
